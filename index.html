@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recuperador Clave Hikvision</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css" media="screen">
+      .table-bordered tbody>tr>td{
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Recuperar Clave Hikvision</h1>
+        </div>
+      </div>
+      <div class="row">
+      <!-- Info -->
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4>Instrucciones De Uso</h4>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <li>
+                  Descargar el Programa SADP Tools De Hikvision <a class="btn btn-info" href="https://mega.nz/#!Ms9wFQoT!PDTUpuwxZGpwv7PohrcosqkoELd0jvNWRrfdUarXZHA" target="_blank">SADP Tools</a>
+                </li>
+                <li>
+                  Ejecutar el programa
+                </li>
+                <li>
+                  Copiar el Serial completo que aparece (Observe la Imagen)
+                  <img src="img/SADP1.png" class="img-responsive">
+                </li>
+                <li>
+                <span class="label label-danger">Nota</span> Para que funcione el código en las versiones DS o superiores solo debe seleccionar el serial a partir del primer número siguiente al segundo guion, por ejemplo: <br/>
+                Del serial <b>DS-2CD2732F-IS20121226CCCH546641810</b> el serial se tomaria a partir de <b>20121226CCCH546641810</b>
+                </li>
+                <li>
+                  Ingresar el año, mes y día que aparece en el <b>DVR o Cámara</b>
+                </li>
+                <li>
+                  Copiar el código de recuperación e ingresarlo en <b>forgot password</b> o <b>recuperar contraseña</b>
+                </li>
+                <li>
+                  El usuario por defecto quedará : <b>admin</b> y la contraseña : <b>12345</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--Fin Info-->
+        <!-- Formato -->
+        <div class="col-md-6">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h4>Formulario de Recuperación</h4>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover table-bordered">
+                <tbody>
+                  <tr>
+                    <td>Serial DVR</td>
+                    <td><input id="serial" type="number" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <td>Año De Cámara</td>
+                    <td><input id="year" type="number" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <td>Mes de Cámara</td>
+                    <td><input id="month" type="number" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <td>Día de Cámara</td>
+                    <td><input id="day" type="number" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <td>Código de Recuperación</td>
+                    <td>
+                      <div class="input-group">
+                        <input id="recovery_code" type="text" readonly="yes" class="form-control">
+                          <span class="input-group-addon btn btn-success" data-clipboard-target="#recovery_code">
+                            Copiar
+                          </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--Fin Formato-->
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/funciones.js"></script>
+  </body>
+</html>
